@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ana Grah | Valores e Serviços Criativos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #f7f5f2;
+    --ink: #1f2a36;
+    --blue: #2d5a8e;
+    --gold: #b68c3a;
+    --muted: #6b7785;
+    --card: #ffffff;
+    --border: #e9e4dd;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 28px 20px 64px;
+  }
+  header.hero {
+    background: linear-gradient(135deg, rgba(45,90,142,0.08), rgba(182,140,58,0.07));
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0 36px;
+  }
+  .brand {
+    letter-spacing: 0.06em;
+    color: var(--blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  h1.title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: clamp(32px, 5vw, 46px);
+    margin: 8px 0 6px;
+    line-height: 1.15;
+    color: var(--ink);
+  }
+  .subtitle {
+    font-size: 16px;
+    color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .tagline {
+    font-style: italic;
+    font-size: 18px;
+    color: var(--blue);
+    border-left: 3px solid var(--gold);
+    padding-left: 12px;
+  }
+  section {
+    margin-top: 40px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: 26px;
+    color: var(--blue);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--gold);
+    display: inline-block;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+  }
+  .card {
+    grid-column: span 12;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  }
+  @media (min-width: 720px){
+    .card.half { grid-column: span 6; }
+  }
+  h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: var(--ink);
+  }
+  p, li {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .price {
+    font-weight: 600;
+    color: var(--gold);
+  }
+  .note {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  ul.clean {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+  }
+  ul.clean li {
+    padding: 6px 0;
+    border-top: 1px dashed var(--border);
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .02em;
+  }
+  footer {
+    margin-top: 52px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+
+<style>
+/* Sticky top nav for quick anchors */
+#services-nav[data-sticky-services-nav]{
+  position:sticky; top:0; z-index:9997; backdrop-filter:saturate(140%) blur(8px);
+  background:rgba(255,255,255,.86); border-bottom:1px solid #eaeaea;
+}
+#services-nav .wrap{max-width:1120px;margin:0 auto;padding:.55rem .75rem;display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+#services-nav a{display:inline-block;padding:.35rem .65rem;border-radius:999px;border:1px solid #e5e7eb;text-decoration:none;
+  color:#0f172a;font-weight:600;font-size:.85rem}
+#services-nav a:hover{box-shadow:0 6px 16px rgba(15,23,42,.08)}
+#services-nav .spacer{flex:1}
+body{scroll-behavior:smooth}
+</style>
+<div id="services-nav" data-sticky-services-nav>
+  <div class="wrap">
+    <a href="#casamentos">Casamentos</a>
+    <a href="#danca">Formatura & Aniversário</a>
+    <a href="#sob-medida">Sob Medida</a>
+    <a href="#poeticos">Escrita Criativa</a>
+    <a href="#biografias">Biografias</a>
+    <a href="#palestras">Palestras</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#mentoria">Mentoria</a>
+<a href="#politica">Política</a>
+    <a href="#protocolo">Protocolo | Mestre de Cerimônias</a>
+<span class="spacer"></span>
+    <a href="./portfolio-ana-grah.html" title="Voltar ao Portfólio" style="display:inline-flex;align-items:center;gap:.4rem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#0f172a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Portfólio</span>
+    </a>
+  </div>
+</div>
+
+  <header class="hero">
+    <div class="container">
+      <div class="brand">Ana Grah | Estúdio Criativo</div>
+      <h1 class="title">Valores e Serviços Criativos</h1>
+      <div class="subtitle"><strong>Escritora, Produtora Cultural e Professora de Dança</strong></div>
+      <div class="tagline">“Onde a arte encontra propósito: transformo experiências em arte, memórias em poesia e movimento em cura.”</div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Dança -->
+    <section id="danca">
+      <div class="section-title"><span class="dot"></span> 🎭 Coreografia para Formandos ou Grupos</div>
+      <div class="grid">
+        <div class="card half">
+          <h3>Pacote 10 aulas (até 15 pessoas)</h3>
+          <p class="price">R$ 1.800,00</p>
+          <p class="note">Aulas presenciais ou híbridas, com foco em técnica, expressão e integração de grupo.</p>
+        </div>
+        <div class="card half">
+          <h3>Pacote 5 aulas (até 15 pessoas)</h3>
+          <p class="price">R$ 1.200,00</p>
+          <p class="note">Aulas presenciais ou híbridas, com foco em técnica, expressão e integração de grupo.</p>
+        </div>
+      </div>
+    
+
+    <!-- Coreografias sob medida -->
+    <section id="sob-medida">
+      <div class="section-title"><span class="dot"></span> 💃 Coreografias Sob Medida</div>
+      <div class="grid">
+        <div class="card">
+          <p><strong>Sob consulta</strong></p>
+          <p class="note">Projetos personalizados para espetáculos, eventos, videoclipes e produções cênicas.</p>
+        </div>
+      </div>
+    </section>
+</section>
+
+    <!-- Casamentos -->
+    <section id="casamentos">
+      <div class="section-title"><span class="dot"></span> 💍 Coreografias para Casamentos</div>
+      <div class="grid">
+        <div class="card half">
+          <h3>Noivos (1 casal)</h3>
+          <ul class="clean">
+            <li><span class="price">R$ 1.200,00</span></li>
+            <li>Inclui 3 ensaios de 1h</li>
+            <li>Vídeo guia personalizado</li>
+            <li>Consultoria de trilha sonora</li>
+          </ul>
+        </div>
+        <div class="card half">
+          <h3>Noivos + Padrinhos</h3>
+          <ul class="clean">
+            <li><span class="price">R$ 2.000,00</span></li>
+            <li>Inclui 4 ensaios de 1h</li>
+            <li>Vídeo guia e adaptação musical</li>
+            <li>Marcações de cena e condução de ensaio geral</li>
+          </ul>
+        </div>
+        <div class="card">
+          <p class="note">Criações exclusivas, com narrativa coreográfica que traduz a história e a energia de cada casal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biografias -->
+    <section id="biografias">
+      <div class="section-title"><span class="dot"></span> ✍️ Biografias Personalizadas</div>
+      <div class="grid">
+        <div class="card half">
+          <ul class="clean">
+            <li><strong>Entrevista:</strong> <span class="price">R$ 130,00 / hora</span></li>
+            <li><strong>Transcrição:</strong> <span class="price">R$ 150 a R$ 200 / hora de áudio</span></li>
+            <li><strong>Redação:</strong> <span class="price">R$ 0,45 por palavra</span></li>
+            <li><strong>Revisão e Edição:</strong> <span class="price">R$ 8 a R$ 15 por mil palavras</span></li>
+          </ul>
+        </div>
+        <div class="card half">
+          <p class="badge">Desconto 10%</p>
+          <p class="note">Pacotes completos (Entrevista + Transcrição + Redação + Revisão) recebem 10% de desconto.</p>
+          <p class="note">Da escuta à escrita, cada biografia é construída como um retrato sensível, poético e verdadeiro.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Textos Poéticos -->
+    <section id="poeticos">
+      <div class="section-title"><span class="dot"></span> 🕊️ Textos Poéticos & Encomendas Literárias</div>
+      <div class="grid">
+        <div class="card half">
+          <h3>Criação autoral</h3>
+          <p class="price">R$ 280,00 por texto (até 2 páginas)</p>
+          <p class="note">Poesias originais a partir de uma história, sentimento ou tema escolhido.</p>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Palestras -->
+    <section id="palestras">
+      <div class="section-title"><span class="dot"></span> 🎤 Palestras & Apresentações Artísticas</div>
+      <div class="grid">
+        <div class="card half">
+          <h3>Apresentação | Palestra (até 1h30)</h3>
+          <p class="price">R$ 1.500 a R$ 3.000</p>
+          <p class="note">Temas: Arte, Superação e Criatividade — vivências que unem corpo, palavra e emoção.</p>
+        </div>
+        <div class="card half">
+          <h3>Formato corporativo</h3>
+          <p class="price">Sob consulta</p>
+          <p class="note">Inclui material audiovisual, performance opcional e adequações à cultura da instituição.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshops -->
+    <section id="workshops">
+      <div class="section-title"><span class="dot"></span> 🌿 Workshops & Vivências</div>
+      <div class="grid">
+        <div class="card half">
+          <h3>Meio período</h3>
+          <p class="price">R$ 1.800,00</p>
+          <p class="note">Experiências imersivas que combinam movimento e reflexão.</p>
+        </div>
+        <div class="card half">
+          <h3>Período integral</h3>
+          <p class="price">R$ 2.800 a R$ 3.200</p>
+          <p class="note">Experiências imersivas que combinam movimento e reflexão.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentorias -->
+    <section id="mentoria">
+      <div class="section-title"><span class="dot"></span> 🔮 Mentoria Criativa & Escrita Sensível</div>
+      <div class="grid">
+        <div class="card half">
+          <h3>Sessão única (1h30)</h3>
+          <p class="price">R$ 320,00</p>
+          <p class="note">Acompanhamento personalizado para projetos de criação.</p>
+        </div>
+        <div class="card half">
+          <h3>Pacotes</h3>
+          <ul class="clean">
+            <li><strong>4 sessões:</strong> <span class="price">R$ 1.100,00</span></li>
+            <li><strong>Plano mensal:</strong> <span class="price">R$ 620,00</span> (2 sessões + feedback assíncrono)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+<section id="protocolo">
+  <div class="section-title"><span class="dot"></span> 🎙️ Protocolo | Mestre de Cerimônias</div>
+  <div class="grid">
+    <div class="card half">
+      <h3>Condução de cerimônia</h3>
+      <p class="price">R$ 800 – 2.000</p>
+      <p class="note">Roteiro, condução e ensaio, com sensibilidade e técnica. Valor varia conforme tipo e duração do evento.</p>
+    </div>
+    <div class="card half">
+      <h3>Roteiro personalizado</h3>
+      <p class="price">R$ 300 – 900</p>
+      <p class="note">Criação de roteiro exclusivo, com linguagem poética e adequação ao cerimonial.</p>
+    </div>
+  </div>
+</section>
+<!-- Política Comercial -->
+    <section id="politica">
+      <div class="section-title"><span class="dot"></span> 💌 Política Comercial</div>
+      <div class="grid">
+        <div class="card">
+          <ul class="clean">
+            <li><strong>Deslocamento:</strong> fora de Ituporanga — R$ 1,50 a R$ 2,00/km ou diárias conforme destino.</li>
+            <li><strong>Reserva:</strong> 50% no ato da contratação; saldo até 48h antes do evento ou entrega.</li>
+            <li><strong>Cancelamento:</strong> até 7 dias sem multa; após esse prazo, 30–50% do valor total.</li>
+            <li><strong>Direitos autorais:</strong> textos e coreografias licenciados para uso pessoal ou institucional (não comercial).</li>
+            <li><strong>Emissão de recibo:</strong> autônoma, conforme necessidade do contratante.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    
+<footer>
+  <p>© <span id="year"></span> Ana Grah • Estúdio Criativo — Todos os direitos reservados.</p>
+  <p style="margin-top:6px;">
+    📞 <a href="https://wa.me/554788350166" target="_blank" style="color:#2d5a8e;text-decoration:none;">+55 47 8835‑0166</a> &nbsp;|&nbsp;
+    📷 <a href="https://www.instagram.com/anac_grah" target="_blank" style="color:#2d5a8e;text-decoration:none;">@anac_grah</a> &nbsp;|&nbsp;
+    ✉️ <a href="mailto:anacgrahn@gmail.com" style="color:#2d5a8e;text-decoration:none;">anacgrahn@gmail.com</a>
+  </p>
+</footer></main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+<style>
+#back-portfolio[data-back-to-portfolio]{position:fixed;left:16px;bottom:18px;z-index:9998;background:#0f172a;color:#fff;
+  border-radius:999px;padding:.6rem .9rem;box-shadow:0 10px 24px rgba(0,0,0,.18);text-decoration:none;font-weight:700}
+#back-portfolio:hover{transform:translateY(-2px)}
+</style>
+<a id="back-portfolio" data-back-to-portfolio href="./portfolio-ana-grah.html" title="Voltar ao Portfólio" style="position:fixed;left:12px;bottom:14px;z-index:9998;background:#0f172a;color:#fff;border-radius:999px;padding:.5rem .6rem;box-shadow:0 10px 24px rgba(0,0,0,.18);text-decoration:none;font-weight:700;display:inline-flex;align-items:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+
+</body>
+</html>
